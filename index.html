@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="cs">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -8,37 +9,59 @@
     <title>Registrace</title>
 </head>
 <body>
-<h2>Get Started</h2>
-<p>Create your account now</p>
-<form action="index.html" method="post"></form>
-<label for="textinput">Full name</label>
-<input type="Full name" id="textinput" name="text" placeholder="Alex Parkinson"
-       required
-       maxlength="50">
-<br>
-<br>
-<label for="emailinput">Email</label>
-<input type="email" id="emailinput" name="email" placeholder="alex@example.com">
-<br>
-<br>
-<label for="passwordinput">Password</label>
-<input type="password" id="passwordinput" name="Password">
-<select name="Favourite day in week">
-    <optgroup label="Work days">
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-    </optgroup>
-    <optgroup>
+<form action="index.html" method="post">
+    <h2>Get Started</h2>
+    <p id="underh">Create your account now</p>
 
+    <label for="textinput">Full name</label>
+    <input type="Full name" id="textinput" name="text" placeholder="Alex Parkinson"
+           required
+           maxlength="50">
+    <br>
+    <label for="Age">Your Age</label>
+    <input type="number" id="Age" name="YourAge"
+           required min="1" max="99">
+    <br>
+    <label for="emailinput">Email</label>
+    <input type="email" id="emailinput" name="email" placeholder="alex@example.com"
+           required>
+    <br>
+    <label for="passwordinput">Password</label>
+    <input type="password" id="passwordinput" name="Password" placeholder="Password"
+           required
+           minlength="8">
+    <br>
+    <label for="checkpassword">Enter your password again</label>
+    <input type="password" id="checkpassword" name="checkPassword" placeholder="Confirm password"
+           required>
+    <br>
+    <label for="favourite-day">Favourite day in week</label>
+    <select id="favourite-day" name="Favourite day in week"
+            required>
+        <optgroup label="Work days">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+        </optgroup>
+        <optgroup label="Weekend days">
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </optgroup>
+    </select>
+    <div>
+        <label for="rights">Souhlasím se smluvními podmínkami</label>
+        <input type="checkbox" id="rights" name="rightscheckbox"
+               required>
+    </div>
+    <input type="submit" value="Sign Up" id="Button">
+    <br>ł
+</form>
+<p> Already have an account?<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Login</a></p>
 
-    </optgroup>
-
-
-</select>
-
+<!-- Rád bych udělal, že to heslo musí být stejné . Bohužel nevím jak :-D-->
 
 </body>
+
 </html>
